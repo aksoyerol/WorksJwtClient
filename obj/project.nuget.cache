@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "6O1fZT540HQpKc5GejyN1vt7dkecZzYx9+RCtf9MlWv3/0sMBlGAnnpo7V9sP/FuP/bZT90IWhS2t+PclOkrZA==",
+  "dgSpecHash": "i56COFhD+yWKUzfmOkL7mj9P320qOkfLvIUCQmOKVK/lmzpMhNdfgLXNZezMHkGb4QlLgyK/PmHYLENEpRk3Ow==",
   "success": true,
   "projectFilePath": "C:\\Users\\erola\\source\\repos\\WorksJwtClient\\WorksJwtClient.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\erola\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

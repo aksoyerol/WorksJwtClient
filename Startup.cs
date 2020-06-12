@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WorksJwtClient.ApiServices.Concrete;
+using WorksJwtClient.ApiServices.Interfaces;
 
 namespace WorksJwtClient
 {
@@ -16,6 +18,9 @@ namespace WorksJwtClient
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IAuthService, AuthManager>();
+            services.AddHttpContextAccessor();
+            services.AddSession();
             services.AddControllersWithViews();
         }
 
@@ -27,6 +32,7 @@ namespace WorksJwtClient
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseSession();
             app.UseRouting();
             app.UseStaticFiles();
             app.UseEndpoints(endpoints =>

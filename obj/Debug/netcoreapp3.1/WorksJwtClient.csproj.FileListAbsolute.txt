@@ -34,3 +34,4 @@ C:\Users\erola\source\repos\WorksJwtClient\obj\Debug\netcoreapp3.1\Razor\Views\S
 C:\Users\erola\source\repos\WorksJwtClient\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\erola\source\repos\WorksJwtClient\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\erola\source\repos\WorksJwtClient\obj\Debug\netcoreapp3.1\Razor\Views\Account\SignIn.cshtml.g.cs
+C:\Users\erola\source\repos\WorksJwtClient\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
