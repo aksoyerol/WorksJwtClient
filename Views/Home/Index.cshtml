@@ -1,1 +1,25 @@
-<h4 class="btn btn-danger">Hello World !</h4>
+@model List<ProductList>
+
+@if(Model!=null){
+    
+<table class="table table-light">
+    <thead class="thead-light">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model){
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+        </tr>
+        }
+    </tbody>
+   
+</table>
+
+}else{
+<h4>Authorization Error</h4>
+}

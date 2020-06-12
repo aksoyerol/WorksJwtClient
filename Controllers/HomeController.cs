@@ -1,15 +1,21 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WorksJwtClient.ApiServices.Interfaces;
 
 namespace WorksJwtClient.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index(){
-            List<string> isimler = new List<string>{"erol","aksoy","güçlü","selin","deneme","yanılma"};
-          
-            return View(isimler.ToList());
+        private readonly IProductApiService _productApiService;
+
+        public HomeController(IProductApiService productApiService)
+        {
+            _productApiService = productApiService;
+        }
+        public async Task<IActionResult> Index(){
+            return View(await _productApiService.GetAllAsync());
         }
     }
 }

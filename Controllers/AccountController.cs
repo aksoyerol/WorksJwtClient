@@ -19,7 +19,7 @@ namespace WorksJwtClient.Controllers{
         public async Task<IActionResult> SignIn(AppUserLogin appUserLogin){
             if(ModelState.IsValid){
                 if(await _authService.Login(appUserLogin) == true){
-                    
+                    return RedirectToAction("Index","Home");
                 }
                 ModelState.AddModelError("","Username or pass wrong !");
 
