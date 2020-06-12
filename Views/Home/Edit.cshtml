@@ -1,0 +1,12 @@
+@model ProductList
+<div class="row">
+<h4 class="mx-auto text-primary mt-3">Edit Product</h4>
+</div>
+<form asp-action="Edit" asp-controller="Home" class="form w-50 mx-auto mt-5">
+    <div class="form-group">
+        <label asp-for="@Model.Name"></label>
+        <input type="text" class="form-control" asp-for="@Model.Name">
+        </div>
+        <button type="submit" class="btn btn-success" asp-route-id="@Model.Id">Save Changes</button>
+    
+</form>

@@ -2,11 +2,13 @@
 
 @if(Model!=null){
     
-<table class="table table-light">
+<table class="table table-light w-75 table-bordered">
+    <a asp-action="Create" class="btn btn-primary">Create New Product</a>
     <thead class="thead-light">
         <tr>
             <th>Id</th>
             <th>Name</th>
+            <th>Panel</th>
         </tr>
     </thead>
     <tbody>
@@ -14,6 +16,10 @@
         <tr>
             <td>@item.Id</td>
             <td>@item.Name</td>
+            <td>
+                <a class="btn btn-primary btn-sm" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
         </tr>
         }
     </tbody>
